@@ -1,0 +1,118 @@
+html {
+    font-size: 62.5%; /* 16px (default font-size for browsers) X 62.5 = 10px = 1rem */
+    box-sizing: border-box; /* border-box makes it easier to manage padding/border/margin for boxes */
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem; /* 16px, based on explanation above in html */
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Layout */
+.grid-container {
+    display: grid; /* grid is responsive and flexible */
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    grid-template-columns: 1fr; /* one column, no sidebars */
+    grid-template-rows: 5rem 1fr 5rem; /* header, rest of page, footer */
+    height: 100%;
+}
+
+header {
+    grid-area: header; /* this line connects this element to the 'header' template in .grid-container (acts as a placeholder) */
+    background-color: #203040;
+}
+
+main {
+    grid-area: main;
+    padding: 1rem;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #203040;
+    color: #ffffff;
+}
+
+/* Common */
+h1 {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    padding: 1rem 0;
+}
+
+a {
+    text-decoration: none; /* removes underlines from links */
+}
+
+a:hover {
+    color: #ff8000; /* cursor turns orange when placed on a link */
+}
+
+/* Header */
+header a {
+    color: #ffffff;
+    padding: 1rem;
+}
+
+a.brand {
+    color: #ffffff; /* this prevents the amazona lettering from turning orange (stays white) */
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.row {
+    display: flex; /* flex expands items to fill available free space or shrinks them to prevent overflow */
+    flex-wrap: wrap; /* flex-wrap makes rows responsive */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer */
+.row.center {
+    justify-content: center;
+}
+
+/* Image */
+img {
+    border-radius: 0.5rem;
+}
+img.medium {
+    max-width: 29rem;
+    width: 100%;
+}
+
+/* Card */
+.card {
+    border: 0.1rem #c0c0c0 solid;
+    background-color: #f8f8f8;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+.card-body > * {
+    /* '> *{' = all direct children of card-body */
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+}
+
+/* Rating */
+.rating span {
+    /* all spans inside rating */
+    color: #f0c040;
+    margin: 0.1rem;
+}
