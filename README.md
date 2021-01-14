@@ -1,4 +1,4 @@
-amazona-app
+amazona-app (Amazon clone)
 
 • HTML5 & CSS3: Semantic Elements, CSS Grid, Flexbox<br>
 • React: Components, Props, Events, Hooks, Router, Axios<br>
